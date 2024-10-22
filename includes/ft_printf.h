@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:35:20 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 17:41:04 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:44:49 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,5 @@ int	ft_putladdr_base(void *ptr, char *base);
 /****************** UTILS *******************/
 
 int	ft_strlen(char *s);
-
-/*////////////////////////////////////////////
-%c : single character					CHECK
-%s : string								CHECK
-%d : decimal			-> base 10		CHECK
-%i : integer			-> base 10		CHECK
-%u : unsigned decimal	-> base 10		CHECK
-%x : number lowercase	-> base HEXA	CHECK
-%X : number uppercase	-> base HEXA	CHECK
-%p : pointer			-> base HEXA	CHECK
-%% : percent sign						CHECK
-////////////////////////////////////////////*/
 
 #endif

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr_len_hex.c                               :+:      :+:    :+:   */
+/*   ft_putlnbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 23:37:01 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 03:17:35 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:32:32 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putunbr_len_hex(unsigned int n, short uppercase)
+int	ft_putlnbr(int n)
 {
+	long	nb;
 	int		len;
-	char	*base;
 
 	if (!n)
-		return (ft_putchar_len('0'));
-	base = tab_hex(uppercase);
+		return (ft_putlchar('0'));
 	len = 0;
-	if (n >= 16)
-		len += ft_putunbr_len_hex(n / 16, uppercase);
-	len += write(1, &base[n % 16], 1);
+	nb = n;
+	if (nb < 0)
+	{
+		len += ft_putlchar('-');
+		nb = -nb;
+	}
+	if (nb >= 10)
+		len += ft_putlnbr(nb / 10);
+	len += ft_putlchar((nb % 10) + '0');
 	return (len);
 }

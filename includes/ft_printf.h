@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 17:35:20 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 03:42:05 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:41:04 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,47 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int		ft_strlen(char *s);
-char	*tab_hex(short uppercase);
+/*************** DICTIONARY ***************/
+# define SINGLE_CHAR	'c'
+# define STRING			's'
+# define DECIMAL		'd'
+# define INTEGER		'i'
+# define U_INTEGER		'u'
+# define NB_HEX_LOWER	'x'
+# define NB_HEX_UPP		'X'
+# define POINTER		'p'
+# define PERCENT_SIGN 	'%'
+/****************** BASE *******************/
+# define BASE_DEC		"0123456789"
+# define BASE_HEX		"0123456789abcdef"
+# define BASE_HEX_UPP	"0123456789ABCDEF"
 
-int		ft_printf(const char *format, ...);
+/**************** FTPRINTF *****************/
 
-int		ft_putchar_len(int c);
-int		ft_putstr_len(char *s);
+int	ft_printf(const char *format, ...);
 
-int		ft_putnbr_len(int nb);
-int		ft_putunbr_len(unsigned int nb);
+/*************** LIB PRINTF ****************/
 
-int		ft_putunbr_len_hex(unsigned int n, short uppercase);
+int	ft_putlchar(int c);
+int	ft_putlstr(char *s);
+int	ft_putlnbr(int n);
+int	ft_putlunbr_base(unsigned int n, char *base);
+int	ft_putladdr_base(void *ptr, char *base);
 
-int		ft_putaddr(void *ptr);
+/****************** UTILS *******************/
+
+int	ft_strlen(char *s);
+
+/*////////////////////////////////////////////
+%c : single character					CHECK
+%s : string								CHECK
+%d : decimal			-> base 10		CHECK
+%i : integer			-> base 10		CHECK
+%u : unsigned decimal	-> base 10		CHECK
+%x : number lowercase	-> base HEXA	CHECK
+%X : number uppercase	-> base HEXA	CHECK
+%p : pointer			-> base HEXA	CHECK
+%% : percent sign						CHECK
+////////////////////////////////////////////*/
 
 #endif

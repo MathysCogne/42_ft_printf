@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:32:51 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 03:53:07 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:30:26 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,13 @@
 
 int	main(int argc, char **argv)
 {
-	// char	c1;
-	// char	c2;
-	// char	c3;
-
-	// c1 = '2';
-	// c2 = '1';
-	// c3 = '0';
-
 	if (argc != 2)
 		return (1);
 	printf("=------ ARG -----=\n\n");
 	printf("%s\n\n", argv[1]);
 	printf("=--- FTPRINTF ---=\n\n");
-	printf(" | Len: %d\n", ft_printf(argv[1], 0, 0));
+	printf(" | Len: %d\n", ft_printf(argv[1], 42, 42));
 	printf("\n=---- PRINTF ----=\n\n");
-	printf(" | Len: %d\n\n", printf(argv[1], 0, 0));
+	printf(" | Len: %d\n\n", printf(argv[1], 42, 42));
 	return (0);
 }

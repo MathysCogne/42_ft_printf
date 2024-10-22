@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_len.c                                    :+:      :+:    :+:   */
+/*   ft_putlstr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,12 @@
 
 #include "ft_printf.h"
 
-int	ft_putstr_len(char *s)
+int	ft_putlchar(int c)
+{
+	return (write(1, &c, 1));
+}
+
+int	ft_putlstr(char *s)
 {
 	int	len;
 

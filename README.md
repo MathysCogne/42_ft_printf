@@ -1,14 +1,16 @@
-# 42 ft_printf 
-
-### Because putnbr and putstr aren’t enough
-
-
-&nbsp;
+<div align="center">
+<h1>42 - FT_PRINTF</h1>
+<p><strong>Because putnbr and putstr aren’t enough</strong></a></p>
+<p><a href="https://github.com/MathysCogne/42_ft_printf/blob/main/subject/printf_en.pdf"><strong>Subject</strong></a></p>
+</br>
+</div>
 
 ## Features
 
 - This project is a custom implementation of the `printf` function in C
 - Handles specifiers: `%c`, `%s`, `%d`, `%i`, `%u`, `%x`, `%X`, `%p`, and `%%`.
+
+</br>
 
 | Specifier | Description        | Base        |
 :-----------|:-------------------|:-------------
@@ -23,7 +25,7 @@
 | **`%%`**  | Percent sign       | --          |
 
 
-&nbsp;
+</br>
 
 ## Project Structure
 
@@ -48,7 +50,7 @@
 
 
 
-&nbsp;
+</br>
 
 ## Compilation `libftprintf.a`
 
@@ -62,5 +64,7 @@ make
 ``make fclean``
 ``make re``
 
+</br>
 
-
+## Disclaimer
+> At 42 School, most projects must comply with the [Norm](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf).

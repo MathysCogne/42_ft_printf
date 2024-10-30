@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:42:50 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 17:40:40 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:14:42 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ static int	carac_format(const char c, va_list args)
 		return (ft_putladdr_base(va_arg(args, void *), BASE_HEX));
 	if (c == PERCENT_SIGN)
 		return (ft_putlchar('%'));
-	else
-		return (-1);
+	return (0);
 }
 
 int	ft_printf(const char *s, ...)

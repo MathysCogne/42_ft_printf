@@ -8,7 +8,7 @@ OBJDIR = obj
 INCDIR = include
 
 # Source Files
-SRC = ft_putlunbr_base.c ft_putladdr_base.c ft_putlnbr.c ft_putlstr.c ft_printf.c ft_utils.c test.c 
+SRC = ft_putlunbr_base.c ft_putladdr_base.c ft_putlnbr.c ft_putlstr.c ft_printf.c ft_utils.c
 OBJ = $(SRC:.c=.o)
 SRC := $(addprefix $(SRCDIR)/, $(SRC))
 OBJ := $(patsubst $(SRCDIR)/%, $(OBJDIR)/%, $(OBJ))
@@ -63,7 +63,7 @@ $(NAME): $(OBJ)
 
 # Clean Rules
 clean:
-	$(V)echo $(RED)'[$(NAME)] Cleaning objects'd$(RESET)
+	$(V)echo $(RED)'[$(NAME)] Cleaning objects'$(RESET)
 	$(V)rm -rf $(OBJDIR)
 
 fclean: clean

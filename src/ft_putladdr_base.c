@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 23:37:01 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 16:39:23 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:19:35 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putladdr_base(void *ptr, char *base)
 {
-	unsigned long long		addr;
-	int						len;
+	unsigned long long	addr;
+	int					len;
 
 	if (!ptr)
 		return (ft_putlstr("(nil)"));

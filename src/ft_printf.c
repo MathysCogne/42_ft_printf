@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:42:50 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/25 21:14:42 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:20:05 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static int	carac_format(const char c, va_list args)
 
 int	ft_printf(const char *s, ...)
 {
-	va_list		args;
-	int			len;
-	int			i;
+	va_list	args;
+	int		len;
+	int		i;
 
 	va_start(args, s);
 	len = 0;

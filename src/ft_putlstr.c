@@ -19,10 +19,7 @@ int	ft_putlchar(int c)
 
 int	ft_putlstr(char *s)
 {
-	int	len;
-
 	if (!s)
 		s = "(null)";
-	len = ft_strlen(s);
-	return (write(1, s, len));
+	return (write(1, s, ft_strlen(s)));
 }

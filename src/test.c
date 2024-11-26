@@ -6,13 +6,13 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:32:51 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/10/22 19:06:02 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/20 16:36:31 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 #include <limits.h>
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -21,9 +21,9 @@ int	main(int argc, char **argv)
 	printf("=------ ARG -----=\n\n");
 	printf("%s\n\n", argv[1]);
 	printf("=--- FTPRINTF ---=\n\n");
-	printf(" | Len: %d\n", ft_printf(argv[1], 42, 42));
+	printf(" | Len: %d\n", ft_printf(argv[1]));
 	printf("\n=---- PRINTF ----=\n\n");
-	printf(" | Len: %d\n\n", printf(argv[1], 42, 42));
+	printf(" | Len: %d\n\n", printf(argv[1]));
 	return (0);
 }
 
@@ -51,7 +51,8 @@ int	main(int argc, char **argv)
 	printf("=------ ARG -----=\n\n");
 	printf("%s\n\n", argv[1]);
 	printf("=--- FTPRINTF ---=\n\n");
-	printf(" | Len: %d\n", ft_printf(argv[1], s, c, i, d, u, x, X, (void *)ptr));
+	printf(" | Len: %d\n", ft_printf(argv[1], s, c, i, d, u, x, X,
+			(void *)ptr));
 	printf("\n=---- PRINTF ----=\n\n");
 	printf(" | Len: %d\n\n", printf(argv[1], s, c, i, d, u, x, X, (void *)ptr));
 	return (0);

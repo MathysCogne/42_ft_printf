@@ -6,7 +6,7 @@
 /*   By: mcogne-- <mcogne--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 22:42:50 by mcogne--          #+#    #+#             */
-/*   Updated: 2024/11/19 16:20:05 by mcogne--         ###   ########.fr       */
+/*   Updated: 2024/11/20 16:37:50 by mcogne--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static int	carac_format(const char c, va_list args)
 		return (ft_putladdr_base(va_arg(args, void *), BASE_HEX));
 	if (c == PERCENT_SIGN)
 		return (ft_putlchar('%'));
+	else
+		return (ft_putlchar(c + '0'));
 	return (0);
 }
 
@@ -39,12 +41,14 @@ int	ft_printf(const char *s, ...)
 	int		len;
 	int		i;
 
+	if (!s)
+		return (-1);
 	va_start(args, s);
 	len = 0;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == '%')
+		if (s[i] == '%' && s[i + 1])
 		{
 			len += carac_format(s[i + 1], args);
 			i++;
